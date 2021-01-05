@@ -21,6 +21,7 @@ class BookmarkList extends Component {
 
   render() {
     const { bookmarks } = this.context
+
     return (
       <section className='BookmarkList'>
         <h2>Your bookmarks</h2>
@@ -29,6 +30,7 @@ class BookmarkList extends Component {
             <BookmarkItem
               key={bookmark.id}
               {...bookmark}
+              rating={parseInt(bookmark.rating)}
             />
           )}
         </ul>
